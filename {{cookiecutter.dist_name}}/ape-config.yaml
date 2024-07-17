@@ -1,0 +1,29 @@
+name: {{ cookiecutter.package_name }}
+plugins:
+  - name: {{ cookiecutter.smart_contract_language }}
+  - name: {{ cookiecutter.web3_provider }}
+  - name: {{ cookiecutter.local_blockchain_node }}
+default_ecosystem: {{ cookiecutter.chain }}
+{{ cookiecutter.chain }}:
+  default_network: {{ cookiecutter.fork_network }}
+  sepolia:
+    default_provider: {{ cookiecutter.web3_provider }}
+  mainnet_fork:
+    default_provider: {{ cookiecutter.local_blockchain_node }}
+    default_transaction_type: 0
+    transaction_acceptance_timeout: 600 # 5 minutes
+{{ cookiecutter.local_blockchain_node }}:
+  fork:
+    {{ cookiecutter.chain }}:
+      mainnet_fork:
+        upstream_provider: {{ cookiecutter.web3_provider }}
+
+# * Example usage of dependencies & remappings
+# dependencies:
+#   - name: OpenZeppelin
+#     github: OpenZeppelin/openzeppelin-contracts
+#     version: 3.2.0
+  
+# solidity:
+#   import_remapping:
+#     - "openzeppelin-contracts-06=OpenZeppelin/3.2.0"
