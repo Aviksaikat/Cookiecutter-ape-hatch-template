@@ -1,0 +1,29 @@
+name: ape_test
+plugins:
+  - name: vyper
+  - name: infura
+  - name: foundry
+default_ecosystem: 2
+2:
+  default_network: mainnet-fork
+  sepolia:
+    default_provider: infura
+  mainnet_fork:
+    default_provider: foundry
+    default_transaction_type: 0
+    transaction_acceptance_timeout: 600 # 5 minutes
+foundry:
+  fork:
+    2:
+      mainnet_fork:
+        upstream_provider: infura
+
+# * Example usage of dependencies & remappings
+# dependencies:
+#   - name: OpenZeppelin
+#     github: OpenZeppelin/openzeppelin-contracts
+#     version: 3.2.0
+  
+# solidity:
+#   import_remapping:
+#     - "openzeppelin-contracts-06=OpenZeppelin/3.2.0"

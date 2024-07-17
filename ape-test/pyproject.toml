@@ -1,25 +1,25 @@
 [project]
-name = "{{ cookiecutter.dist_name }}"
+name = "ape-test"
 authors = [
-  { name = "{{ cookiecutter.dist_name }}", email = "{{ cookiecutter.email }}" }
+  { name = "ape-test", email = "king.arthur@camelot.bt" }
 ]
-description = "{{ cookiecutter.project_short_description }}"
+description = "Demo project to test the new ape template"
 readme = "README.md"
 dynamic = ["version"]
 license = { file = "LICENSE" }
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: {{ cookiecutter.python_version }}",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
-requires-python = ">={{ cookiecutter.python_version }}"
+requires-python = ">=3.9"
 dependencies = [
 ]
 
 [project.urls]
-Documentation = "{{ cookiecutter.docs_url }}"
-Source = "{{ cookiecutter.repository_url }}"
+Documentation = "https://Aviksaikat.github.io/ape-test/"
+Source = "https://github.com/Aviksaikat/ape-test"
 
 [tool.hatch]
 
@@ -34,7 +34,7 @@ allow-direct-references = true
 [tool.hatch.version]
 source = "regex_commit"
 commit_extra_args = ["-e"]
-path = "{{ cookiecutter.dist_name }}/scripts/__init__.py"
+path = "ape-test/scripts/__init__.py"
 
 
 ##################
@@ -42,7 +42,7 @@ path = "{{ cookiecutter.dist_name }}/scripts/__init__.py"
 ##################
 
 [tool.mypy]
-files = ["{{cookiecutter.package_name}}"]
+files = ["ape_test"]
 exclude = ["build/", "dist/", "docs/", "tests/*"]
 disallow_untyped_defs = true
 disallow_any_unimported = true
@@ -54,7 +54,7 @@ show_error_codes = true
 
 
 [tool.ruff]
-target-version = "py{{ cookiecutter.python_version | replace(".", "") }}"
+target-version = "py39"
 line-length = 120
 indent-width = 4
 include = [
@@ -116,7 +116,7 @@ ignore = [
 
 
 [tool.ruff.lint.isort]
-known-first-party = ["{{ cookiecutter.package_name }}"]
+known-first-party = ["ape_test"]
 
 
 [tool.ruff.lint.flake8-tidy-imports]
@@ -131,7 +131,7 @@ ban-relative-imports = "all"
 
 
 [tool.pytest.ini_options]
-# addopts = "--cov=src/{{ cookiecutter.package_name }}/ --cov-report=term-missing"
+# addopts = "--cov=src/ape_test/ --cov-report=term-missing"
 
 
 #####################
@@ -165,25 +165,19 @@ lint = [
   "echo \"VERSION: `ruff --version`\"",
   "ruff format .",
   "ruff check . --fix",
-  "mypy src/{{ cookiecutter.package_name }}/",
+  "mypy src/ape_test/",
 ]
 lint-check = [
   "echo \"VERSION: `ruff --version`\"",
   "ruff format --check .",
   "ruff check .",
-  "mypy src/{{ cookiecutter.package_name }}/",
+  "mypy src/ape_test/",
 ]
 
 # Docs env dendencies
 [tool.hatch.envs.docs]
 dependencies = [
-{% if cookiecutter.mkdocs == "Y" -%}
-  "mkdocs",
-  "mkdocs-material",
-  "mkdocs-gen-files",
-  "mkdocstrings[python]",
-  "linkchecker",
-{%- endif %}
+
 ]
 
 
@@ -212,7 +206,7 @@ test-cov-xml = "pytest --cov-report=xml"
 
 # Replace tox & nox
 [[tool.hatch.envs.test.matrix]]
-python = ["{{ cookiecutter.python_version }}"]
+python = ["3.9"]
 
 #########
 # Build #
