@@ -6,7 +6,7 @@ Simple Cookiecutter template for [`Ape`](https://github.com/ApeWorX/ape) (ApeWor
 |         |                                    |
 |---------|------------------------------------|
 | Details | [![License - MIT][MIT-image]][MIT-link] [![GitHub Sponsors][sponsor-image]][sponsor-link] |
-| Features | [![Hatch project][hatch-image]][hatch-link] [![linting - Ruff][ruff-image]][ruff-link] [![types - mypy][mypy-image]][mypy-link] [![test - pytest][pytest-image]][pytest-link] [![linting - precommit][precommit-image]][precommit-link] [![docs - mkdocs][mkdocs-image]][mkdocs-link] |
+| Features | [![Hatch project][hatch-image]][hatch-link] [![linting - Ruff][ruff-image]][ruff-link] [![types - mypy][mypy-image]][mypy-link] [![test - pytest][pytest-image]][pytest-link] [![linting - precommit][precommit-image]][precommit-link] [![docs - mkdocs][mkdocs-image]][mkdocs-link]
 
 
 
@@ -21,7 +21,11 @@ Simple Cookiecutter template for [`Ape`](https://github.com/ApeWorX/ape) (ApeWor
 * [X] Documentation with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and docstring reference support with [mkdocstrings](https://mkdocstrings.github.io/).
 * [X] [pyproject.toml]: all package, build and tool configuration in one file,
 * [X] [pre-commit]: pre-commit git hooks that make your life easier,
-* [X] [Markdown]: instead of reStructuredText, Markdown is used consistently for all text files,
+* [X] [Markdown]: instead of reStructuredText, Markdown is used consistently for all text files
+
+
+## Demo
+![](./media/demo.gif)
 
 ## 💫 Quickstart
 
@@ -43,10 +47,6 @@ The generator will automatically call `hatch env create` at the end.
 ```bash
 cruft create https://github.com/Aviksaikat/Cookiecutter-ape-hatch-template
 ```
-
-## Demo
-![](./media/demo.gif)
-
 
 ## License
 

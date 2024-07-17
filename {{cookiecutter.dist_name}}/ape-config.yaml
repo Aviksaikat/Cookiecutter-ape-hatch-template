@@ -19,6 +19,7 @@ default_ecosystem: {{ cookiecutter.chain }}
         upstream_provider: {{ cookiecutter.web3_provider }}
 
 # * Example usage of dependencies & remappings
+# ? More configuration examples: https://github.com/Aviksaikat/Ape-Usage/blob/main/network-configs.md
 # dependencies:
 #   - name: OpenZeppelin
 #     github: OpenZeppelin/openzeppelin-contracts

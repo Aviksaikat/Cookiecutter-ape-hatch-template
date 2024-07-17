@@ -3,7 +3,7 @@ name = "ape-test"
 authors = [
   { name = "ape-test", email = "king.arthur@camelot.bt" }
 ]
-description = "Demo project to test the new ape template"
+description = "A demo project to test the new cookiecutter template for ape"
 readme = "README.md"
 dynamic = ["version"]
 license = { file = "LICENSE" }

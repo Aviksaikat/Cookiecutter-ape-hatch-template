@@ -9,76 +9,58 @@ Set WindowBar Colorful
 Set Framerate 60
 
 Set Shell zsh
-Type ""
+Type "cookiecutter https://github.com/Aviksaikat/Cookiecutter-ape-hatch-template"
 Enter 1
-Sleep 1s
+Sleep 1.5s
 Type "Saikat K"
 Enter
 Sleep 500ms
 Enter
+Sleep 500ms
 Type "Aviksaikat"
 Enter
 Sleep 1.5s
-Type "Ape-test"
+Type "ape-"
+Sleep 500ms
+Type "test"
 Enter 3
 Sleep 1s
-Type "Demo project to test "
-Sleep 3s
-Type "a"
-Backspace
-Type "te"
-Backspace
-Type "he new ape template"
+Type "A demo project to test the new coo"
+Sleep 500ms
+Type "kiecutter template for ape"
 Enter
-Sleep 1s
+Sleep 500ms
 Enter 3
-Sleep 3s
-Type "5"
-Enter
 Sleep 500ms
 Type "2"
 Enter
 Sleep 500ms
 Type "2"
 Enter
-Type "2"
-Enter
 Sleep 500ms
-Enter
-Sleep 1s
-Enter
 Type "2"
 Enter
 Sleep 2s
+Type "2"
+Enter
+Sleep 1s
+Enter 2
+Sleep 500ms
+Enter
+Sleep 500ms
 Type "2"
 Enter
 Sleep 500ms
 Enter
 Type "12"
 Enter
-Sleep 500ms
-Type "3"
+Type "1"
 Enter
-Sleep 3.5s
-Type "ls ape"
-Tab
-Sleep 500ms
-Enter
-Sleep 1s
-Type "tree ape"
-Tab
-Enter
-Sleep 3s
-Type "cat ape"
-Tab
-Sleep 500ms
-Type "py"
-Tab
-Escape
-Backspace 11
-Type "ape-c"
-Tab
-Enter
+Sleep 5s
+Type "tree ape-test"
+Enter 1
 Sleep 2s
-Ctrl+D
+Type "cat ape-test/ape-config.yaml"
+Enter 1
+Sleep 5s
 
